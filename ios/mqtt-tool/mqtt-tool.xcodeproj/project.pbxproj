@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5C40DAB275F35E70028D8DB /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = D5C40DAA275F35E70028D8DB /* CocoaMQTT */; };
+		D52EAD9F2768EF76004D78F8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D52EAD9E2768EF76004D78F8 /* SnapKit */; };
+		D52EADA22768EF89004D78F8 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D52EADA12768EF89004D78F8 /* Then */; };
+		D52EADA52769176E004D78F8 /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = D52EADA42769176E004D78F8 /* CocoaMQTT */; };
+		D58917CF276931E200C46C10 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58917CE276931E200C46C10 /* PublishController.swift */; };
 		D5D957E5272BCA2B00D03917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E4272BCA2B00D03917 /* AppDelegate.swift */; };
 		D5D957E7272BCA2B00D03917 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E6272BCA2B00D03917 /* SceneDelegate.swift */; };
 		D5D957E9272BCA2B00D03917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E8272BCA2B00D03917 /* ViewController.swift */; };
-		D5D957EC272BCA2B00D03917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D957EA272BCA2B00D03917 /* Main.storyboard */; };
 		D5D957EE272BCA2D00D03917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D957ED272BCA2D00D03917 /* Assets.xcassets */; };
 		D5D957F1272BCA2D00D03917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D957EF272BCA2D00D03917 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D58917CE276931E200C46C10 /* PublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		D5D957E1272BCA2B00D03917 /* mqtt-tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mqtt-tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D957E4272BCA2B00D03917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D957E6272BCA2B00D03917 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5D957E8272BCA2B00D03917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5D957EB272BCA2B00D03917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5D957ED272BCA2D00D03917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D957F0272BCA2D00D03917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5D957F2272BCA2D00D03917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C40DAB275F35E70028D8DB /* CocoaMQTT in Frameworks */,
+				D52EADA22768EF89004D78F8 /* Then in Frameworks */,
+				D52EADA52769176E004D78F8 /* CocoaMQTT in Frameworks */,
+				D52EAD9F2768EF76004D78F8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +65,7 @@
 				D5D957E4272BCA2B00D03917 /* AppDelegate.swift */,
 				D5D957E6272BCA2B00D03917 /* SceneDelegate.swift */,
 				D5D957E8272BCA2B00D03917 /* ViewController.swift */,
-				D5D957EA272BCA2B00D03917 /* Main.storyboard */,
+				D58917CE276931E200C46C10 /* PublishController.swift */,
 				D5D957ED272BCA2D00D03917 /* Assets.xcassets */,
 				D5D957EF272BCA2D00D03917 /* LaunchScreen.storyboard */,
 				D5D957F2272BCA2D00D03917 /* Info.plist */,
@@ -86,7 +90,9 @@
 			);
 			name = "mqtt-tool";
 			packageProductDependencies = (
-				D5C40DAA275F35E70028D8DB /* CocoaMQTT */,
+				D52EAD9E2768EF76004D78F8 /* SnapKit */,
+				D52EADA12768EF89004D78F8 /* Then */,
+				D52EADA42769176E004D78F8 /* CocoaMQTT */,
 			);
 			productName = "mqtt-tool";
 			productReference = D5D957E1272BCA2B00D03917 /* mqtt-tool.app */;
@@ -117,7 +123,9 @@
 			);
 			mainGroup = D5D957D8272BCA2B00D03917;
 			packageReferences = (
-				D5C40DA9275F35E70028D8DB /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+				D52EAD9D2768EF76004D78F8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D52EADA02768EF89004D78F8 /* XCRemoteSwiftPackageReference "Then" */,
+				D52EADA32769176E004D78F8 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
 			);
 			productRefGroup = D5D957E2272BCA2B00D03917 /* Products */;
 			projectDirPath = "";
@@ -135,7 +143,6 @@
 			files = (
 				D5D957F1272BCA2D00D03917 /* LaunchScreen.storyboard in Resources */,
 				D5D957EE272BCA2D00D03917 /* Assets.xcassets in Resources */,
-				D5D957EC272BCA2B00D03917 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D957E9272BCA2B00D03917 /* ViewController.swift in Sources */,
+				D58917CF276931E200C46C10 /* PublishController.swift in Sources */,
 				D5D957E5272BCA2B00D03917 /* AppDelegate.swift in Sources */,
 				D5D957E7272BCA2B00D03917 /* SceneDelegate.swift in Sources */,
 			);
@@ -155,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5D957EA272BCA2B00D03917 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5D957EB272BCA2B00D03917 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D5D957EF272BCA2D00D03917 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,7 +302,6 @@
 				INFOPLIST_FILE = "mqtt-tool/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +329,6 @@
 				INFOPLIST_FILE = "mqtt-tool/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,7 +368,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D5C40DA9275F35E70028D8DB /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+		D52EAD9D2768EF76004D78F8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D52EADA02768EF89004D78F8 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		D52EADA32769176E004D78F8 /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/emqx/CocoaMQTT";
 			requirement = {
@@ -381,9 +395,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D5C40DAA275F35E70028D8DB /* CocoaMQTT */ = {
+		D52EAD9E2768EF76004D78F8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5C40DA9275F35E70028D8DB /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			package = D52EAD9D2768EF76004D78F8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D52EADA12768EF89004D78F8 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52EADA02768EF89004D78F8 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		D52EADA42769176E004D78F8 /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52EADA32769176E004D78F8 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
 			productName = CocoaMQTT;
 		};
 /* End XCSwiftPackageProductDependency section */
