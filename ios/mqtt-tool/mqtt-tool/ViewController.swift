@@ -23,7 +23,6 @@ class ViewController: UIViewController {
   
   private let hostTextField = UITextField().then {
     $0.keyboardType = .decimalPad
-    $0.text = "192.168.0.6"
   }
   
   private let portLabel = UILabel().then {
@@ -32,7 +31,6 @@ class ViewController: UIViewController {
   
   private let portTextField = UITextField().then {
     $0.keyboardType = .numberPad
-    $0.text = "1883"
   }
   
   private lazy var connectButton = UIButton(type: .system).then {
