@@ -1,8 +1,7 @@
-import os
 import torch
 from flask import Flask, jsonify, url_for, render_template, request, redirect, send_from_directory
+import boto3
 from werkzeug.utils import secure_filename
-import ssl
 from PIL import Image
 import uuid
 
@@ -34,13 +33,21 @@ def results_img(results):
         object_list.append(objects)
         
     # not e-scooter in photo
-    if any('electric_scooter' in i for i in object_list) != True:  
+    if any('electric_scooter' in i for i in object_list) != True:
         return '1'                                                                      
 
     output = any('brailleblock' in i for i in object_list)
     print(output)
 
     if output:
+        dynamodb = boto3.resource('dynamodb', region_name='ap-northeast-2')
+        table = dynamodb.Table('Ledge_DB')
+        table.put_item(
+            Item = {
+                'data_id': id,
+                'timestamp': datatime,
+            }  
+        )
         return '2'  # why? reference info page
     else:
         return '0'
