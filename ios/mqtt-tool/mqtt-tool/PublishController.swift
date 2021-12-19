@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+import Alamofire
 import CocoaMQTT
 
 class PublishController: UIViewController {
@@ -99,14 +101,26 @@ class PublishController: UIViewController {
     
     let publishProperties = MqttPublishProperties()
     publishProperties.contentType = "JSON"
-    processTime {
+    processTime(type: 1) {
       mqtt!.publish("test/test1", withString: imageBase64, qos: .qos1)
     }
   }
   
   @objc func didTapReqButton() {
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-      self.reqTimeLabel.text = "0.0251236242342524241"
+    
+    guard let selectedImage = selectedImage else { return }
+    guard let imageData = selectedImage.jpegData(compressionQuality: 0.75) else { return }
+    
+    let baseURL: String = "http://localhost:3000/api"
+    let header: HTTPHeaders = ["Content-Type" : "multipart/form-data"]
+  
+    processTime(type: 2) {
+      AF.upload(multipartFormData: { multipartFormData in
+        multipartFormData.append(Data("value".utf8), withName: "key")
+        multipartFormData.append(imageData, withName: "key", fileName: "image.jpeg", mimeType: "image/jpeg")
+      }, to: baseURL, usingThreshold: UInt64.init(), method: .post, headers: header).responseString { response in
+        print(response)
+      }
     }
   }
   
@@ -151,12 +165,17 @@ class PublishController: UIViewController {
     }
   }
   
-  func processTime(closure: () -> ()) {
+  func processTime(type: Int, closure: () -> ()) {
     let start = CFAbsoluteTimeGetCurrent()
     closure()
     let processTime = CFAbsoluteTimeGetCurrent() - start
-    processTimeLabel.text = "\(processTime)"
-    print("경과 시간: \(processTime)")
+    
+    if type == 1 {
+      processTimeLabel.text = "\(processTime)"
+    } else {
+      reqTimeLabel.text = "\(processTime)"
+    }
+//    print("경과 시간: \(processTime)")
   }
   
 }

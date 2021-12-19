@@ -11,6 +11,7 @@
 		D52EADA22768EF89004D78F8 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D52EADA12768EF89004D78F8 /* Then */; };
 		D52EADA52769176E004D78F8 /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = D52EADA42769176E004D78F8 /* CocoaMQTT */; };
 		D58917CF276931E200C46C10 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58917CE276931E200C46C10 /* PublishController.swift */; };
+		D58917D2276AF5AE00C46C10 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D58917D1276AF5AE00C46C10 /* Alamofire */; };
 		D5D957E5272BCA2B00D03917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E4272BCA2B00D03917 /* AppDelegate.swift */; };
 		D5D957E7272BCA2B00D03917 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E6272BCA2B00D03917 /* SceneDelegate.swift */; };
 		D5D957E9272BCA2B00D03917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D957E8272BCA2B00D03917 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D52EADA22768EF89004D78F8 /* Then in Frameworks */,
+				D58917D2276AF5AE00C46C10 /* Alamofire in Frameworks */,
 				D52EADA52769176E004D78F8 /* CocoaMQTT in Frameworks */,
 				D52EAD9F2768EF76004D78F8 /* SnapKit in Frameworks */,
 			);
@@ -93,6 +95,7 @@
 				D52EAD9E2768EF76004D78F8 /* SnapKit */,
 				D52EADA12768EF89004D78F8 /* Then */,
 				D52EADA42769176E004D78F8 /* CocoaMQTT */,
+				D58917D1276AF5AE00C46C10 /* Alamofire */,
 			);
 			productName = "mqtt-tool";
 			productReference = D5D957E1272BCA2B00D03917 /* mqtt-tool.app */;
@@ -126,6 +129,7 @@
 				D52EAD9D2768EF76004D78F8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D52EADA02768EF89004D78F8 /* XCRemoteSwiftPackageReference "Then" */,
 				D52EADA32769176E004D78F8 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+				D58917D0276AF5AE00C46C10 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D5D957E2272BCA2B00D03917 /* Products */;
 			projectDirPath = "";
@@ -392,6 +396,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		D58917D0276AF5AE00C46C10 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -409,6 +421,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D52EADA32769176E004D78F8 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
 			productName = CocoaMQTT;
+		};
+		D58917D1276AF5AE00C46C10 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D58917D0276AF5AE00C46C10 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
